@@ -1,5 +1,24 @@
+/*========== Import Bootstrap Variables ==========*/
+@import "../scss/bootstrap-variables.scss";
+
 /*========== Import Bootstrap ==========*/
 @import "~bootstrap/scss/bootstrap.scss";
 
 /*========== Import Variables ==========*/
-@import "../scss/variables";
+@import "../scss/variables.scss";
+
+/*========== App Imports ==========*/
+@import "../views/Main/MainPage/index.scss";
+@import "../views/Main/Home/index.scss";
+@import "../views/Main/About/index.scss";
+@import "../views/Main/Contact/index.scss";
+@import "../views/Main/Post/index.scss";
+@import "../views/Main/Posts/index.scss";
+@import "../views/Main/NotFound/index.scss";
+
+/*========== Admin Imports ==========*/
+@import "../views/Admin/AdminPage/index.scss";
+@import "../views/Admin/Dashboard/index.scss";
+
+/*========== Auth Imports ==========*/
+@import "../views/Auth/Login/index.scss";
