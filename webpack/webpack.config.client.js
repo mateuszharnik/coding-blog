@@ -117,13 +117,23 @@ module.exports = (webpackEnv, { mode }) => {
           loader: 'eslint-loader',
         },
         {
+          test: /\.(woff2?|ttf|eot|svg)$/,
+          exclude: /(node_modules|bower_components)/,
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
+        },
+        {
           test: /\.(png|jpe?g|gif|svg)$/,
           exclude: /(node_modules|bower_components)/,
           loader: 'url-loader',
           options: {
             limit: 8192,
             name: '[name].[ext]',
-            outputPath: 'img/',
+            outputPath: 'images/',
           },
         },
       ],
@@ -184,10 +194,10 @@ module.exports = (webpackEnv, { mode }) => {
       }),
       new CopyPlugin({
         patterns: [
-          // {
-          //   from: './public/favicon.png',
-          //   to: 'favicon.png',
-          // },
+          {
+            from: './public/favicons/*.png',
+            to: 'favicons/[name].[ext]',
+          },
           {
             from: './public/manifest.json',
             to: 'manifest.json',
