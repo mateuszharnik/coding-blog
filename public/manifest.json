@@ -1,9 +1,24 @@
 {
   "name": "Coding Blog",
+  "lang": "pl-PL",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/favicons/favicon-32x32.png",
       "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicons/favicon-144x144.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
   ]

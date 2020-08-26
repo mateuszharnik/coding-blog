@@ -1,24 +1,24 @@
-/*========== Import Bootstrap Variables ==========*/
-@import "../scss/bootstrap-variables.scss";
+/*========== Import Variables ==========*/
+@import "../assets/scss/variables";
 
 /*========== Import Bootstrap ==========*/
-@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/bootstrap";
 
-/*========== Import Variables ==========*/
-@import "../scss/variables.scss";
+/*========== Global Imports ==========*/
+@import "../assets/scss/index";
 
 /*========== App Imports ==========*/
-@import "../views/Main/MainPage/index.scss";
-@import "../views/Main/Home/index.scss";
-@import "../views/Main/About/index.scss";
-@import "../views/Main/Contact/index.scss";
-@import "../views/Main/Post/index.scss";
-@import "../views/Main/Posts/index.scss";
-@import "../views/Main/NotFound/index.scss";
+@import "../views/Main/MainPage/index";
+@import "../views/Main/Home/index";
+@import "../views/Main/About/index";
+@import "../views/Main/Contact/index";
+@import "../views/Main/Post/index";
+@import "../views/Main/Posts/index";
+@import "../views/Main/NotFound/index";
 
 /*========== Admin Imports ==========*/
-@import "../views/Admin/AdminPage/index.scss";
-@import "../views/Admin/Dashboard/index.scss";
+@import "../views/Admin/AdminPage/index";
+@import "../views/Admin/Dashboard/index";
 
 /*========== Auth Imports ==========*/
-@import "../views/Auth/Login/index.scss";
+@import "../views/Auth/Login/index";

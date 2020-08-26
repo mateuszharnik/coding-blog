@@ -1,0 +1,7 @@
+/*========== Import Variables ==========*/
+@import "./variables";
+
+::selection {
+  background-color: $primary;
+  color: $white;
+}
