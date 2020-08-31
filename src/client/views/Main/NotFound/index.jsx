@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { routes } from '@client/helpers/constants';
 import img from '@client/assets/images/undraw_page_not_found_su7k.svg';
 
 class NotFound extends Component {
@@ -32,7 +33,7 @@ class NotFound extends Component {
     }));
 
     if (counter <= 0) {
-      history.push('/');
+      history.push(routes.HOME);
     }
   };
 
@@ -49,7 +50,7 @@ class NotFound extends Component {
           />
           <p className="text-center mt-4">
             <span className="d-block">Nie znaleziono strony.</span>
-            Przekierowanie do <Link to="/">strony głównej</Link> nastąpi za {counter}s.
+            Przekierowanie do <Link to={routes.HOME} title="Wróć do strony głównej">strony głównej</Link> nastąpi za {counter}s.
           </p>
         </div>
       </div>

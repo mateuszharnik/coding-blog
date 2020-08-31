@@ -2,6 +2,7 @@ import React, { Component, lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router, Redirect, Route, Switch,
 } from 'react-router-dom';
+import { routes } from '@client/helpers/constants';
 import MainPage from '@client/views/Main/MainPage';
 import './index.scss';
 
@@ -20,11 +21,11 @@ class App extends Component {
       <Router>
         <Suspense fallback={<div />}>
           <Switch>
-            <Route path="/zaloguj" exact component={Login} />
-            <Route path="/admin" component={AdminPage} />
-            <Route path="/404" exact component={NotFound} />
-            <Route path="/" component={MainPage} />
-            <Redirect from="*" to="/404" />
+            <Route path={routes.LOGIN} exact component={Login} />
+            <Route path={routes.ADMIN} component={AdminPage} />
+            <Route path={routes.NOT_FOUND} exact component={NotFound} />
+            <Route path={routes.HOME} component={MainPage} />
+            <Redirect from="*" to={routes.NOT_FOUND} />
           </Switch>
         </Suspense>
       </Router>
