@@ -1,5 +1,7 @@
 import React, { Component, lazy, Suspense } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import {
+  Link, Redirect, Route, Switch,
+} from 'react-router-dom';
 import Home from '@client/views/Main/Home';
 
 const Contact = lazy(() => import('@client/views/Main/Contact'));
@@ -16,7 +18,18 @@ class MainPage extends Component {
   render() {
     return (
       <>
-        <div className="mb-2">MainPage is ready!</div>
+        <div className="container my-2">
+          <div className="mb-2">
+            <Link className="mr-2" to="/">Home</Link>
+            <Link className="mr-2" to="/o-mnie">About</Link>
+            <Link className="mr-2" to="/kontakt">Contact</Link>
+            <Link className="mr-2" to="/posty">Posty</Link>
+            <Link className="mr-2" to="/posty/123">Post</Link>
+            <Link className="mr-2" to="/zaloguj">Login</Link>
+            <Link className="mr-2" to="/admin">Admin</Link>
+            <Link to="/sadfsd">NotFound</Link>
+          </div>
+        </div>
         <Suspense fallback={<div />}>
           <Switch>
             <Route path="/" exact component={Home} />

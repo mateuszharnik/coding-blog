@@ -117,7 +117,7 @@ module.exports = (webpackEnv, { mode }) => {
           loader: 'eslint-loader',
         },
         {
-          test: /\.(woff2?|ttf|eot|svg)$/,
+          test: /\.(woff2?|ttf|eot)$/,
           exclude: /(node_modules|bower_components)/,
           loader: 'url-loader',
           options: {

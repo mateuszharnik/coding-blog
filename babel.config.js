@@ -1,6 +1,6 @@
 module.exports = {
   presets: ['@babel/preset-env', '@babel/preset-react'],
-  plugins: ['@babel/plugin-syntax-dynamic-import'],
+  plugins: ['@babel/plugin-syntax-dynamic-import', '@babel/plugin-proposal-class-properties'],
   env: {
     development: {
       plugins: [['babel-plugin-webpack-alias', { config: './webpack/webpack.config.server.js' }]],
