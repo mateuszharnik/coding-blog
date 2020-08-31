@@ -1,2 +1,17 @@
 /*========== Import Variables ==========*/
 @import "../../../assets/scss/variables";
+
+.not-found {
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+
+  &__container {
+    max-width: 500px;
+    min-width: 300px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
