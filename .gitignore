@@ -146,5 +146,6 @@ $RECYCLE.BIN/
 
 # Custom
 Todo.md
+uploads/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,node,visualstudiocode
