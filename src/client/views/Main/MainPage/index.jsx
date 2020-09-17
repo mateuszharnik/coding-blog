@@ -1,9 +1,11 @@
+import PropTypes from 'prop-types';
 import React, { Component, lazy, Suspense } from 'react';
-import {
-  Link, Redirect, Route, Switch,
-} from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setAuthorsLength } from '@client/store/NavBar/actions';
 import { routes } from '@client/helpers/constants';
 import Home from '@client/views/Main/Home';
+import NavBar from '@client/components/NavBar';
 
 const Contact = lazy(() => import('@client/views/Main/Contact'));
 const Posts = lazy(() => import('@client/views/Main/Posts'));
@@ -11,40 +13,25 @@ const Post = lazy(() => import('@client/views/Main/Post'));
 const About = lazy(() => import('@client/views/Main/About'));
 
 class MainPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
+  }
+
+  componentDidMount() {
+    const { authorsLength, handleSetAuthorsLength } = this.props;
+
+    if (!authorsLength) {
+      handleSetAuthorsLength(new Array(1).length);
+    }
   }
 
   render() {
     return (
       <>
-        <div className="container my-2">
-          <div className="mb-2">
-            <Link className="mr-2" to={routes.HOME}>
-              Home
-            </Link>
-            <Link className="mr-2" to={routes.ABOUT}>
-              About
-            </Link>
-            <Link className="mr-2" to={routes.CONTACT}>
-              Contact
-            </Link>
-            <Link className="mr-2" to={routes.POSTS}>
-              Posts
-            </Link>
-            <Link className="mr-2" to={`${routes.POSTS}/123`}>
-              Post
-            </Link>
-            <Link className="mr-2" to={routes.LOGIN}>
-              Login
-            </Link>
-            <Link className="mr-2" to={routes.ADMIN}>
-              Admin
-            </Link>
-            <Link to={routes.NOT_FOUND}>NotFound</Link>
-          </div>
-        </div>
+        <header className="mb-2">
+          <NavBar />
+        </header>
         <Suspense fallback={<div />}>
           <Switch>
             <Route path={routes.HOME} exact component={Home} />
@@ -60,4 +47,19 @@ class MainPage extends Component {
   }
 }
 
-export default MainPage;
+MainPage.propTypes = {
+  authorsLength: PropTypes.number.isRequired,
+  handleSetAuthorsLength: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  authorsLength: state.navbar.authorsLength,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleSetAuthorsLength: (length) => {
+    dispatch(setAuthorsLength(length));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);

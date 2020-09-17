@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.BASE_URL}>
         <Suspense fallback={<div />}>
           <Switch>
             <Route path={routes.LOGIN} exact component={Login} />
