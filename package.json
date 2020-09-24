@@ -16,7 +16,9 @@
     "lint:js": "yarn run lint:client && yarn run lint:server",
     "lint:server": "eslint ./src/server/ --ext .js --fix",
     "lint:client": "eslint ./src/client/ --ext .js,.jsx --fix",
-    "lint:style": "stylelint ./src/client/**/*.{css,scss} --fix"
+    "lint:style": "stylelint ./src/client/**/*.{css,scss} --fix",
+    "seed": "cross-env EXAMPLE_DATA=false babel-node ./src/server/seeds/index.js",
+    "seed:example": "cross-env EXAMPLE_DATA=true babel-node ./src/server/seeds/index.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [
