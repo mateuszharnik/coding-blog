@@ -6,6 +6,11 @@ export const authorsErrorMessages = {
   AUTHOR_ALREADY_EXIST: 'Autor o podanym imieniu już istnieje.',
 };
 
+export const aboutErrorMessages = {
+  ABOUT_NOT_FOUND: 'Nie znaleziono informacji o blogu.',
+  ABOUT_NOT_UPDATED: 'Nie udało się zaktualizować informacji o blogu.',
+};
+
 export const serverErrorMessages = {
   DEFAULT: 'Wystąpił błąd.',
 };

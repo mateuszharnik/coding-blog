@@ -1,7 +1,5 @@
 import Joi from 'joi';
+import { idRegExp } from '@server/helpers/regexp';
 
-const idRegExp = /^[a-f\d]{24}$/i;
-
-const idSchema = Joi.string().trim().regex(idRegExp).required();
-
-export default idSchema;
+// eslint-disable-next-line import/prefer-default-export
+export const idSchema = Joi.string().trim().regex(idRegExp).required();
