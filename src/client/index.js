@@ -1,5 +1,6 @@
 import '@client/helpers/devtools';
 import 'babel-polyfill';
+import '@client/config';
 import { Provider } from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -2,8 +2,8 @@ import React, { Component, lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router, Redirect, Route, Switch,
 } from 'react-router-dom';
-import { routes } from '@client/helpers/constants';
 import MainPage from '@client/views/Main/MainPage';
+import { routes } from '@client/helpers/constants';
 import './index.scss';
 
 const NotFound = lazy(() => import('@client/views/Main/NotFound'));
@@ -13,11 +13,13 @@ const Login = lazy(() => import('@client/views/Auth/Login'));
 class App extends Component {
   constructor() {
     super();
+
     this.state = {};
   }
 
-  render() {
-    return (
+  render = () => (
+    <>
+      <h1 className="d-none">Coding Blog</h1>
       <Router basename={process.env.BASE_URL}>
         <Suspense fallback={<div />}>
           <Switch>
@@ -29,8 +31,8 @@ class App extends Component {
           </Switch>
         </Suspense>
       </Router>
-    );
-  }
+    </>
+  )
 }
 
 export default App;
