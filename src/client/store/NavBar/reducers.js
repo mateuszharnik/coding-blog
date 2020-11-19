@@ -1,21 +1,13 @@
-import {
-  CLOSEMENU, TOGGLEMENU, TOGGLEDISABLED, SETAUTHORSLENGTH,
-} from './actions';
+import { CLOSEMENU, TOGGLEMENU, TOGGLEDISABLED } from './actions';
 
 const initialState = {
   isOpen: false,
   isDisabled: false,
   isExpanded: false,
-  authorsLength: 0,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SETAUTHORSLENGTH:
-      return {
-        ...state,
-        authorsLength: action.authorsLength,
-      };
     case CLOSEMENU:
       return {
         ...state,

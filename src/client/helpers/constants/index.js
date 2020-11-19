@@ -1,8 +1,7 @@
 export const routes = {
   HOME: '/',
-  ABOUT: '/(o-mnie|o-nas)',
-  ABOUT_ME: '/o-mnie',
-  ABOUT_US: '/o-nas',
+  AUTHORS: '/autorzy',
+  ABOUT: '/o-blogu',
   ADMIN: '/admin',
   CONTACT: '/kontakt',
   LOGIN: '/zaloguj',
@@ -11,7 +10,6 @@ export const routes = {
   POST: '/posty/:id',
 };
 
-export const aboutLinkNames = {
-  ABOUT_ME: 'O mnie',
-  ABOUT_US: 'O nas',
+export const errors = {
+  SERVER_CONNECTION: 'Nie można połączyć się z serwerem.',
 };
