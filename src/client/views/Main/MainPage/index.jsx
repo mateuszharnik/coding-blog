@@ -8,6 +8,7 @@ const Contact = lazy(() => import('@client/views/Main/Contact'));
 const Posts = lazy(() => import('@client/views/Main/Posts'));
 const Post = lazy(() => import('@client/views/Main/Post'));
 const About = lazy(() => import('@client/views/Main/About'));
+const Authors = lazy(() => import('@client/views/Main/Authors'));
 
 class MainPage extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class MainPage extends Component {
         <Switch>
           <Route path={routes.HOME} exact component={Home} />
           <Route path={routes.ABOUT} exact component={About} />
+          <Route path={routes.AUTHORS} exact component={Authors} />
           <Route path={routes.CONTACT} exact component={Contact} />
           <Route path={routes.POSTS} exact component={Posts} />
           <Route path={routes.POST} exact component={Post} />

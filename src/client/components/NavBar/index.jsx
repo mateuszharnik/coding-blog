@@ -37,6 +37,9 @@ const NavBar = ({
           <Link className="nav-link" to={routes.ABOUT} onClick={handleCloseMenu}>O Blogu</Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link" to={routes.AUTHORS} onClick={handleCloseMenu}>Autorzy</Link>
+        </li>
+        <li className="nav-item">
           <Link className="nav-link" to={routes.CONTACT} onClick={handleCloseMenu}>Kontakt</Link>
         </li>
         <li className="nav-item">

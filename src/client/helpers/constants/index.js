@@ -13,3 +13,8 @@ export const routes = {
 export const errors = {
   SERVER_CONNECTION: 'Nie można połączyć się z serwerem.',
 };
+
+export const genders = {
+  MALE: 'Mężczyzna',
+  FEMALE: 'Kobieta',
+};
