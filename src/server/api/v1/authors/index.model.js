@@ -11,6 +11,7 @@ const AuthorSchema = new Schema(
     description: {
       type: String, minlength: 10, maxlength: 2000, required: true,
     },
+    gender: { type: String, required: true },
     image: { type: String, default: '' },
     social_media: {
       facebook: { type: String, default: '' },

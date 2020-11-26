@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Spinner from '@client/components/Spinner';
+import NoContent from '@client/components/NoContent';
+import ServerError from '@client/components/ServerError';
 import { getAbout } from '@client/helpers/api/about';
 import { errors } from '@client/helpers/constants';
 
@@ -50,25 +52,13 @@ class About extends Component {
 
     if (errorMessage) {
       return (
-        <div className="server-error position-relative">
-          <div className="server-error__container center p-2">
-            <p className="text-center mt-4">
-              {errorMessage}
-            </p>
-          </div>
-        </div>
+        <ServerError message={errorMessage} />
       );
     }
 
     if (!description) {
       return (
-        <div className="no-content position-relative">
-          <div className="no-content__container center p-2">
-            <p className="text-center mt-4">
-              Brak treści.
-            </p>
-          </div>
-        </div>
+        <NoContent />
       );
     }
 
@@ -79,7 +69,7 @@ class About extends Component {
             O blogu
           </h3>
         </header>
-        <article>
+        <article className="container about__description row mx-auto">
           <div className="py-5 text-center">
             {description}
           </div>

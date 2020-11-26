@@ -24,3 +24,8 @@ export const statusCodes = {
   CONFLICT: 409,
   SERVER_ERROR: 500,
 };
+
+export const genders = {
+  MALE: 'Mężczyzna',
+  FEMALE: 'Kobieta',
+};

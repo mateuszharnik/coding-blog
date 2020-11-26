@@ -5,22 +5,24 @@ import { routes } from '@client/helpers/constants';
 import img from '@client/assets/images/undraw_page_not_found_su7k.svg';
 
 class NotFound extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
     this.state = {
       counter: 10,
     };
+
     this.interval = null;
     this.time = 1000;
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     document.title = 'Coding Blog | 404';
 
     this.interval = setInterval(this.count, this.time);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     clearInterval(this.interval);
   }
 
@@ -37,7 +39,7 @@ class NotFound extends Component {
     }
   };
 
-  render() {
+  render = () => {
     const { counter } = this.state;
 
     return (

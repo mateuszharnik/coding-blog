@@ -5,7 +5,7 @@ import {
   getAuthors,
   getAuthor,
   updateAuthor,
-  saveAuthor,
+  addAuthor,
   deleteAuthors,
   deleteAuthor,
 } from './index.controller';
@@ -32,7 +32,7 @@ router.put(
 
 router.post(
   '/',
-  saveAuthor,
+  addAuthor,
 );
 
 router.delete(
