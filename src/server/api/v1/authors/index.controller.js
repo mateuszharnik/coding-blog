@@ -86,7 +86,7 @@ export const updateAuthor = async (req, res, next) => {
   }
 };
 
-export const saveAuthor = async (req, res, next) => {
+export const addAuthor = async (req, res, next) => {
   const sendError = responseWithError.bind(null, res, next);
   const { error: schemaError, value } = schema.validate(req.body);
 

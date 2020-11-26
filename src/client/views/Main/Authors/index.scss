@@ -34,13 +34,3 @@
     }
   }
 }
-
-.server-error,
-.no-content {
-  height: calc(100vh - 70.02px);
-
-  &__container {
-    max-width: 500px;
-    min-width: 300px;
-  }
-}

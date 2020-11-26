@@ -6,6 +6,8 @@ import {
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 import Spinner from '@client/components/Spinner';
+import NoContent from '@client/components/NoContent';
+import ServerError from '@client/components/ServerError';
 import { getAuthors } from '@client/helpers/api/authors';
 import { errors, genders } from '@client/helpers/constants';
 import femaleAvatar from '@client/assets/images/undraw_female_avatar_w3jk.svg';
@@ -127,25 +129,13 @@ class Authors extends Component {
 
     if (errorMessage) {
       return (
-        <div className="server-error position-relative">
-          <div className="server-error__container center p-2">
-            <p className="text-center mt-4">
-              {errorMessage}
-            </p>
-          </div>
-        </div>
+        <ServerError message={errorMessage} />
       );
     }
 
     if (!authors.length) {
       return (
-        <div className="no-content position-relative">
-          <div className="no-content__container center p-2">
-            <p className="text-center mt-4">
-              Brak treści.
-            </p>
-          </div>
-        </div>
+        <NoContent />
       );
     }
 
