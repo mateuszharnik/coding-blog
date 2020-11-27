@@ -4,9 +4,8 @@ const AboutSchema = new Schema(
   {
     description: {
       type: String,
-      minlength: 10,
-      maxlength: 2000,
-      required: true,
+      maxlength: 5000,
+      default: '',
     },
     deleted_at: { type: Date, default: null },
   },

@@ -9,13 +9,13 @@ const seedAbout = async () => {
   try {
     await About.deleteMany();
 
-    const { error, value } = schema.validate(data);
-
-    if (error) {
-      throw new Error(error);
-    }
-
     if (EXAMPLE_DATA) {
+      const { error, value } = schema.validate(data);
+
+      if (error) {
+        throw new Error(error);
+      }
+
       await About.create(value);
     } else {
       await About.create({
