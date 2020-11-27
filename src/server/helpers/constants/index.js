@@ -6,6 +6,13 @@ export const authorsErrorMessages = {
   AUTHOR_ALREADY_EXIST: 'Autor o podanym imieniu już istnieje.',
 };
 
+export const messagesErrorMessages = {
+  MESSAGE_NOT_FOUND: 'Nie znaleziono wiadomości.',
+  MESSAGE_NOT_CREATED: 'Nie udało się wysłać wiadomości.',
+  MESSAGE_NOT_UPDATED: 'Nie udało się pobrać wiadomości.',
+  MESSAGE_NOT_DELETED: 'Nie udało się usunąć wiadomości.',
+};
+
 export const aboutErrorMessages = {
   ABOUT_NOT_FOUND: 'Nie znaleziono informacji o blogu.',
   ABOUT_NOT_UPDATED: 'Nie udało się zaktualizować informacji o blogu.',
@@ -28,4 +35,12 @@ export const statusCodes = {
 export const genders = {
   MALE: 'Mężczyzna',
   FEMALE: 'Kobieta',
+};
+
+export const times = {
+  TEN_MINUTES: 10 * 60 * 1000,
+};
+
+export const limiterMessages = {
+  MESSAGES: 'Przekroczono limit wysłanych wiadomości. Proszę spróbować za jakiś czas.',
 };
