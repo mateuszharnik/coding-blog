@@ -2,6 +2,7 @@ import 'babel-polyfill';
 import db from '@server/db';
 import seedAuthors from './authors';
 import seedAbout from './about';
+import seedContact from './contact';
 import seedMessages from './messages';
 import seedSocialMedia from './socialMedia';
 
@@ -9,6 +10,7 @@ const seed = async () => {
   try {
     await seedAuthors();
     await seedAbout();
+    await seedContact();
     await seedMessages();
     await seedSocialMedia();
 
