@@ -23,7 +23,7 @@ export const getAuthors = async (req, res, next) => {
     const total = await Author.countDocuments({ deleted_at: null });
     const authors = await Author.find({ deleted_at: null }, null, { skip, limit, sort });
 
-    res.status(OK).json({
+    const result = authors.length ? {
       total,
       authors,
       pagination: {
@@ -31,7 +31,9 @@ export const getAuthors = async (req, res, next) => {
         limit,
         remaining: total - (skip + limit) > 0,
       },
-    });
+    } : [];
+
+    res.status(OK).json(result);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log(error);
@@ -120,9 +122,12 @@ export const deleteAuthors = async (req, res, next) => {
   const sendError = responseWithError.bind(null, res, next);
 
   try {
-    const { n: deleted = 0 } = await Author.updateMany({}, { deleted_at: Date.now() });
+    const { n: deleted = 0 } = await Author.updateMany(
+      { deleted_at: null }, { deleted_at: Date.now() },
+    );
 
-    res.status(OK).json({ deleted });
+    const result = deleted ? { deleted } : [];
+    res.status(OK).json(result);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log(error);
