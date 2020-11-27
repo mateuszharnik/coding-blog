@@ -9,17 +9,17 @@ const seedAuthors = async () => {
   try {
     await Author.deleteMany();
 
-    const authorsArr = data.map((author) => {
-      const { error, value } = schema.validate(author);
-
-      if (error) {
-        throw new Error(error);
-      }
-
-      return value;
-    });
-
     if (EXAMPLE_DATA) {
+      const authorsArr = data.map((author) => {
+        const { error, value } = schema.validate(author);
+
+        if (error) {
+          throw new Error(error);
+        }
+
+        return value;
+      });
+
       await Author.insertMany(authorsArr);
     }
   } catch (error) {

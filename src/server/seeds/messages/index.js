@@ -9,17 +9,17 @@ const seedMessages = async () => {
   try {
     await Message.deleteMany();
 
-    const messagesArr = data.map((message) => {
-      const { error, value } = schema.validate(message);
-
-      if (error) {
-        throw new Error(error);
-      }
-
-      return value;
-    });
-
     if (EXAMPLE_DATA) {
+      const messagesArr = data.map((message) => {
+        const { error, value } = schema.validate(message);
+
+        if (error) {
+          throw new Error(error);
+        }
+
+        return value;
+      });
+
       await Message.insertMany(messagesArr);
     }
   } catch (error) {

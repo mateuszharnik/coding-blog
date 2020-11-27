@@ -6,6 +6,11 @@ export const authorsErrorMessages = {
   AUTHOR_ALREADY_EXIST: 'Autor o podanym imieniu już istnieje.',
 };
 
+export const socialMediaErrorMessages = {
+  SOCIAL_MEDIA_NOT_FOUND: 'Nie znaleziono linków do mediów społecznościowych.',
+  SOCIAL_MEDIA_NOT_UPDATED: 'Nie udało się zaktualizować linków do mediów społecznościowych.',
+};
+
 export const messagesErrorMessages = {
   MESSAGE_NOT_FOUND: 'Nie znaleziono wiadomości.',
   MESSAGE_NOT_CREATED: 'Nie udało się wysłać wiadomości.',
