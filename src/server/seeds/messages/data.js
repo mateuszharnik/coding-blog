@@ -10,6 +10,7 @@ for (let i = 0; i < 10; i += 1) {
     email: `example${id}@domain.com`,
     subject: `Temat wiadomości numer ${id}`,
     content,
+    terms_accepted: true,
   });
 }
 

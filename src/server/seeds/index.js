@@ -4,12 +4,14 @@ import seedAuthors from './authors';
 import seedAbout from './about';
 import seedContact from './contact';
 import seedMessages from './messages';
+import seedNewsletter from './newsletter';
 import seedSocialMedia from './socialMedia';
 
 const seed = async () => {
   try {
     await seedAuthors();
     await seedAbout();
+    await seedNewsletter();
     await seedContact();
     await seedMessages();
     await seedSocialMedia();

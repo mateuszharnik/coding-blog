@@ -10,7 +10,7 @@ const seedAuthors = async () => {
     await Author.deleteMany();
 
     if (EXAMPLE_DATA) {
-      const authorsArr = data.map((author) => {
+      const authors = data.map((author) => {
         const { error, value } = schema.validate(author);
 
         if (error) {
@@ -20,7 +20,7 @@ const seedAuthors = async () => {
         return value;
       });
 
-      await Author.insertMany(authorsArr);
+      await Author.insertMany(authors);
     }
   } catch (error) {
     // eslint-disable-next-line no-console

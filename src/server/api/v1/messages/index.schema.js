@@ -11,6 +11,7 @@ const schema = Joi.object().keys({
   content: Joi.string().trim().min(10).max(2500)
     .required(),
   readed: Joi.boolean().default(false),
+  terms_accepted: Joi.boolean().valid(true).required(),
 });
 
 export default schema;
