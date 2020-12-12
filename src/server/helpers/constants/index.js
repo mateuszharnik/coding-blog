@@ -6,6 +6,13 @@ export const authorsErrorMessages = {
   AUTHOR_ALREADY_EXIST: 'Autor o podanym imieniu już istnieje.',
 };
 
+export const emailsErrorMessages = {
+  EMAIL_NOT_FOUND: 'Nie znaleziono adresu email.',
+  EMAIL_NOT_CREATED: 'Nie udało się zapisać adresu email.',
+  EMAIL_NOT_DELETED: 'Nie udało się usunąć adresu email.',
+  EMAIL_ALREADY_EXIST: 'Adres email jest już zapisany.',
+};
+
 export const socialMediaErrorMessages = {
   SOCIAL_MEDIA_NOT_FOUND: 'Nie znaleziono linków do mediów społecznościowych.',
   SOCIAL_MEDIA_NOT_UPDATED: 'Nie udało się zaktualizować linków do mediów społecznościowych.',

@@ -10,7 +10,7 @@ const seedMessages = async () => {
     await Message.deleteMany();
 
     if (EXAMPLE_DATA) {
-      const messagesArr = data.map((message) => {
+      const messages = data.map((message) => {
         const { error, value } = schema.validate(message);
 
         if (error) {
@@ -20,7 +20,7 @@ const seedMessages = async () => {
         return value;
       });
 
-      await Message.insertMany(messagesArr);
+      await Message.insertMany(messages);
     }
   } catch (error) {
     // eslint-disable-next-line no-console

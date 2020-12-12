@@ -5,6 +5,7 @@ import about from '@server/api/v1/about/index.router';
 import contact from '@server/api/v1/contact/index.router';
 import messages from '@server/api/v1/messages/index.router';
 import socialMedia from '@server/api/v1/socialMedia/index.router';
+import newsletter from '@server/api/v1/newsletter/index.router';
 
 const { OK } = statusCodes;
 const router = Router();
@@ -16,6 +17,7 @@ router.use('/about', about);
 router.use('/contact', contact);
 router.use('/authors', authors);
 router.use('/messages', messages);
+router.use('/newsletter', newsletter);
 router.use('/social-media', socialMedia);
 
 export default router;

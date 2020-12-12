@@ -25,6 +25,7 @@ const MessageSchema = new Schema(
       required: true,
     },
     readed: { type: Boolean, default: false },
+    terms_accepted: { type: Boolean, required: true },
     deleted_at: { type: Date, default: null },
   },
   {
