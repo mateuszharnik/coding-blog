@@ -6,6 +6,14 @@ export const authorsErrorMessages = {
   AUTHOR_ALREADY_EXIST: 'Autor o podanym imieniu już istnieje.',
 };
 
+export const faqsErrorMessages = {
+  FAQ_NOT_FOUND: 'Nie znaleziono pytania.',
+  FAQ_NOT_CREATED: 'Nie udało się utworzyć nowego pytania.',
+  FAQ_NOT_UPDATED: 'Nie udało się zaktualizować pytania.',
+  FAQ_NOT_DELETED: 'Nie udało się usunąć pytania.',
+  FAQ_ALREADY_EXIST: 'Pytanie już istnieje.',
+};
+
 export const emailsErrorMessages = {
   EMAIL_NOT_FOUND: 'Nie znaleziono adresu email.',
   EMAIL_NOT_CREATED: 'Nie udało się zapisać adresu email.',
