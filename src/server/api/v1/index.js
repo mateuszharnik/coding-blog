@@ -6,6 +6,7 @@ import contact from '@server/api/v1/contact/index.router';
 import messages from '@server/api/v1/messages/index.router';
 import socialMedia from '@server/api/v1/socialMedia/index.router';
 import newsletter from '@server/api/v1/newsletter/index.router';
+import faqs from '@server/api/v1/faqs/index.router';
 
 const { OK } = statusCodes;
 const router = Router();
@@ -19,5 +20,6 @@ router.use('/authors', authors);
 router.use('/messages', messages);
 router.use('/newsletter', newsletter);
 router.use('/social-media', socialMedia);
+router.use('/faqs', faqs);
 
 export default router;

@@ -6,6 +6,7 @@ import seedContact from './contact';
 import seedMessages from './messages';
 import seedNewsletter from './newsletter';
 import seedSocialMedia from './socialMedia';
+import seedFAQs from './faqs';
 
 const seed = async () => {
   try {
@@ -15,6 +16,7 @@ const seed = async () => {
     await seedContact();
     await seedMessages();
     await seedSocialMedia();
+    await seedFAQs();
 
     db.close();
   } catch (error) {
