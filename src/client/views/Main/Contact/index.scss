@@ -1,2 +1,17 @@
 /*========== Import Variables ==========*/
 @import "../../../assets/scss/variables";
+
+.contact-page {
+  max-width: 768px;
+
+  &__button {
+    display: block;
+    margin-top: 2rem;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
